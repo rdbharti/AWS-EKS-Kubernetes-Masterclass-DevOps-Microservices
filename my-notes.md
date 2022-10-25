@@ -60,7 +60,7 @@ eksctl create nodegroup --cluster=eksdemo1 \
                         --nodes=2 \
                         --nodes-min=2 \
                         --nodes-max=4 \
-                        --nodes-volume-size=20 \
+                        --node-volume-size=20 \
                         --shh-access \
                         --ssh-public-key=kube-demo \
                         --managed \
