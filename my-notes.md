@@ -14,7 +14,7 @@
 4. Run Kubernetes apps
 
 =============================================
-    Create EKS Cluster using eksctl 
+   1. Create EKS Cluster using eksctl 
 ============================================
 
 [//]: <> (Create cluster without nodegroup)
@@ -27,4 +27,22 @@ eksctl create cluster --name=eksctldemo1 --region=us-east-1 --zones=us-east-1a,u
 [//]: <> (Get List of Clusters)
 ```
 eksctl get clusters
+```
+
+====================================================
+    2. Create & Associate IAM OIDC provider
+        for our EKS Cluster
+=====================================================
+
+- To enable and use AWS IAM roles for Kubernets Service account on our EKS cluster, we must create and associate OIDC identity provider
+- To do so using ``` eksctl ``` we can use the below command
+
+```
+#### Template
+eksctl utils associate-iam-oidc-provider --region <region-code> --cluster <cluster-name> --approve
+```
+
+```
+#### Template
+eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster eksdemo1 --approve
 ```
