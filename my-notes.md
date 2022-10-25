@@ -129,7 +129,7 @@ brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
 
 # Verify eksctl version
-eksctl version
+eksctl versions
 ```
 
 ### Step-03-02: eksctl on windows or linux
