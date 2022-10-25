@@ -56,3 +56,18 @@ our application run.
     - We can even run our own private registry.
     - When we use the docker pull or docker run commands, the required images are pulled from our configured registry.
     - When we use the docker push command, our image is pushed to our configured registry.
+
+    # Docker Installation
+     - ## Windows 
+        ```https://docs.docker.com/desktop/install/windows-install/```
+
+     - ## AmznLinux2 
+        ```markdown
+            sudo yum update
+
+            sudo yum install docker -y
+
+            sudo systemctl enable docker
+
+            sudo systemctl start docker
+        ```
