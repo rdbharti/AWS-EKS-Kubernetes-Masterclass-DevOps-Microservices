@@ -46,3 +46,10 @@ eksctl utils associate-iam-oidc-provider --region <region-code> --cluster <clust
 #### Template
 eksctl utils associate-iam-oidc-provider --region us-east-1 --cluster eksdemo1 --approve
 ```
+===========================
+    3. Create EC2 KeyPair
+===========================
+
+- create a new EC2 Keypair with name as ```kube-demo```
+- This keypair we will use it when creating the EKS NodeGroup.
+- This will help us to login to the EKS Worker Nodes using Terminal.
