@@ -13,3 +13,17 @@
 
 ![Virtual Machine Vs Containers](https://k21academy.com/wp-content/uploads/2020/05/2020_05_13_12_19_07_PowerPoint_Slide_Show_Azure_AZ104_M01_Compute_ed1_-1536x701.png)
 
+# Advantages of using Docker
+- Flexible
+    - Even the most complex applications can be containerazed
+- LightWeight
+    - Conatiners leverage and share the host kernal, making them more efficient in terms of system resources than virtual machines.
+- Portable
+    - You can build locally -> Deploy to Cloud -> Run anywhere
+- Loosely Coupled
+    - Containers are highly self suffcient and encapsulated, 
+    allowing to replace/upgrade one without disrupting others.
+- Scalable
+    - Can increase and automatically distribute cconatiners replicas across a datacentre.
+- Secure
+    - Containers apply aggressive constrains and isolations to process without any configuration required on the part of the user.
