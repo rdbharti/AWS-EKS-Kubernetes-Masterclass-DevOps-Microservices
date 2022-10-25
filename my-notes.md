@@ -71,3 +71,46 @@ eksctl create nodegroup --cluster=eksdemo1 \
                         --alb-ingress-access
 
 ```
+
+## 5. Verify Cluster and Nodes
+
+### Verify NodeGroup subnets to confirm EC2 instances are in Public Subnet
+- Verify the node group subnet to ensure its created in public subnets
+    - Go to Services -> EKS -> eksdemo1 -> eks-demo-ng-public1
+    - click on Associate subnet in Details Tab
+    - Click on Route Table Tab
+    - We should see the internet route via Internet Gateway (0.0.0.0/0 -> igw-xxxxxx)
+
+### Verify Cluster, NodeGroup,in EKS MManagement Console
+- Go to Services -> Elastic Kubernetes Service -> eksdemo1
+
+### List Worker Nodes
+
+```markdown
+# List EKD Clusters
+eksctl get cluster
+
+# List NodeGroups in a cluster
+eksctl get nodegroup cluster=<cluster-name>
+
+# List Nodes in current kubernetes cluster 
+kubectl get nodes -o wide
+
+# Our kubectl contetxt should be automatically changed to new cluster
+kubectl config view --minify
+```
+
+### Verify Worer node IAM Role and list Policies
+- Go to Services -> EC2 -> Worker Nodes
+- Click on IAM Role associated to ec3 worker nodes
+
+### Verify Security Group Associated to worker Nodes
+- EC2 -> Worker Nodes
+- Click on Security Group associated with ec2 instance which contains ```remote``` in the name
+
+### Varify Cloudformation Stacks
+- Verify Control Plane Stack Events
+- Verify NodeGroup Stack and Events
+
+### Login to Worker node using Key-Pair 
+- login to worker node
