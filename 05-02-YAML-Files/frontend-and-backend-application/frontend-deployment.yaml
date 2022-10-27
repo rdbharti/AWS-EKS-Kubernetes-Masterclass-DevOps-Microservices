@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-nginx-app
+  labels:
+    app: frontend-nginx-app
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend-nginx-app
+  template:
+    metadata:
+      labels:
+        app: frontend-nginx-app
+        tier: frontend
+    spec:
+      containers:
+        - name: frontend-nginx-app
+          image: stacksimplify/kube-frontend-nginx:1.0.0
+          ports:
+            - containerPort: 80
