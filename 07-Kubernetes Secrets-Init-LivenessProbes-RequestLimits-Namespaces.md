@@ -257,3 +257,10 @@ kubectl get sc,pvc,pv
 
 ## References:
 - https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+
+------------------------------
+# Namespaces
+----------------------------
+1. Namespaces - Imperative using kubectl
+2. Namespaces -  Declarative using YAML & LimitRange
+3. Namespaces -  Declarative using YAML & ResourceQuota
